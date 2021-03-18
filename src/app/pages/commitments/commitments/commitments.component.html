@@ -1,0 +1,73 @@
+<!-- <app-header></app-header>
+<app-side-menu></app-side-menu> -->
+<app-banner [contentText]="headerContent"></app-banner>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-5 pl-50 pr-50 pt-lg-80 pl-lg-100 pt-20">
+            <p class="pb-20 sub-section-title-black caps">Discipleship 2021</p>
+            <p class="font-work-sans-bold">March 19, 2021</p>
+            <p class="font-work-sans-bold">11:00 am - 12:00 pm</p>
+            <p class="font-work-sans-bold">Registration Fee: Free</p>
+        </div>
+
+        <div class="col-lg-7">
+            <p class="pt-lg-80 pl-lg-100 pt-20 section-title-black">Your Details</p>
+            <div class="container body mt-sm-30 pl-lg-100">
+                <section class="row mx-0">
+                    <section class="col-md-6 px-0 pr-md-15">
+                        <div class="px-0 pb-md-30">
+
+                            <form  class="py-10 py-md-15 pl-30 pr-30">
+                                <div class="form-group font-work-sans">
+                                    <label style="color: gray; font-size: 10px;" for="full_name">Full Name</label>
+                                    <input type="text" id="full_name" class="form-control border-hidden" />
+                                </div>
+                                <div class="form-group font-work-sans">
+                                    <label style="color: gray; font-size: 10px;" for="email">Email address</label>
+                                    <input type="text" id="email" class="form-control border-hidden" />
+                                </div>
+                                <div class="form-group font-work-sans">
+                                    <label style="color: gray; font-size: 10px;" for="mobile">Mobile Number</label>
+                                    <input type="text" id="mobile" class="form-control border-hidden" />
+                                </div>
+                                <div class="form-group font-work-sans">
+                                    <label style="color: gray; font-size: 10px;" for="gender">Gender</label>
+                                    <select type="text" id="gender" class="form-control border-hidden">
+                                        <option value="" selected>Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select> 
+                                </div>
+                                <div class="form-group font-work-sans">
+                                    <label style="color: gray; font-size: 10px;" for="fb">Facebook</label>
+                                    <input type="text" id="fb" class="form-control border-hidden" />
+                                </div>
+                                <button type="submit" (click)="contact()" class="btn btn-black mt-40">Submit</button>
+                            </form>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<!-- 
+<div *ngIf="isLoading" class="d-flex justify-content-center spinner-container">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div> -->
+
+
+
+
+<!-- <app-footer></app-footer> -->
+
+
+<!-- <re-captcha (resolved)="captchaResolved()"
+                                            siteKey="6Lf0-swUAAAAAByyyBxIWZ7o1-Hubrkelp1sBQEb" class="mb-10 d-block">
+                                        </re-captcha> -->

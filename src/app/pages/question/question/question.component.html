@@ -1,0 +1,57 @@
+<!-- 
+<div class="container-fluid">
+
+
+    <div *ngIf="!mobile && result === 'success'" class="message-result">
+        <h1 class="message-title">Thank you for your payment for ENC Conference 2020.</h1>
+        <h3 class="message-sub-title pt-50">Please check your email for an electronic Acknowledgement Receipt from the payment gateway.</h3>
+    </div>
+
+    <div *ngIf="mobile && result === 'success'" class="message-result">
+        <p class="message-title">Thank you for your payment for ENC Conference 2020.</p>
+        <p class="message-sub-title pt-50">Please check your email for an electronic Acknowledgement Receipt from the payment gateway.</p>
+    </div>
+
+
+    <div *ngIf="!mobile && result === 'failed'" class="message-result">
+        <h1 class="message-title">We apologize but your transaction did not push through.</h1>
+        <h3 class="message-sub-title pt-50">Please try again. If you need further assistance, you may contact our ENC Philippines office at:</h3>
+        <h3 class="message-sub-title">Email: ahira.perez@everynationcampus.org </h3>
+        <h3 class="message-sub-title">Phone: (632) 8817-1212 </h3>
+    </div>
+
+    <div *ngIf="mobile && result === 'failed'" class="message-result">
+        <p class="message-title">We apologize but your transaction did not push through.</p>
+        <p class="message-sub-title pt-50">Please try again. If you need further assistance, you may contact our ENC Philippines office at:</p>
+        <p class="message-sub-title">Email: ahira.perez@everynationcampus.org</p>
+        <p class="message-sub-title">Phone: (632) 8817-1212 </p>
+    </div>
+
+    <div class="card border-0 shadow-none">
+        <div class="card-body">
+            <button [ngClass]="mobile ? 'button-success-fail-mobile' : 'button-success-fail'" [routerLink]="['/payment']" [queryParams]="{reg_code: query.reg_code}">Return to my payment history</button>
+        </div>
+    </div>
+</div> -->
+
+
+<app-banner [contentText]="headerContent"></app-banner>
+
+<div class="container-fluid pt-lg-100 pt-20">
+    <div class=" py-30 px-30">
+        <div>
+            <div data-aos="zoom-in-up" class="text-content content-container px-lg-100 pb-lg-100 pb-50">
+                <h2 *ngIf="yes !== 'yes'" class="section-title-blue font-work-sans-bold pb-30">You successfully registered to be Ken Marc&#39;s boyfriend.</h2>
+                <p *ngIf="yes !== 'yes'" class="caption">Are you sure, Zela? Hehe</p>
+
+                <h2 *ngIf="yes === 'yes'" class="section-title-blue font-work-sans-bold pb-30">HUHU I LOVE YOU prettyme_iz3l!!</h2>
+                <img *ngIf="yes === 'yes'" src="assets/images/izel.jpg" alt="">
+               
+                <div class="row" *ngIf="yes !== 'yes'">
+                    <button class="btn btn-primary button-location font-work-sans mt-50 col-lg-4 col-md-12" (click)="yesSir()">Yes</button>
+                    <button class="btn btn-gray button-location move-button font-work-sans mt-50 col-lg-4 col-md-12" >No</button>
+                </div>
+            </div>
+            
+        </div>
+</div>

@@ -1,0 +1,33 @@
+@import './variables';
+
+@mixin breakpoint($breakpoint) {
+    $min: map-get($breakpoints, $breakpoint);
+    @if ($min != 0) {
+      @media screen and (min-width: $min) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+}
+
+@mixin flex-center($align: both) {
+  display: flex;
+  @if $align == "both" {
+    align-items: center;
+    justify-content: center;
+  } @else if $align == "horizontal" {
+    justify-content: center;
+  } @else if $align == "vertical" {
+    align-items: center;
+  }
+}
+
+// FUNCTIONS
+@function suffix($breakpoint) {
+  @if ($breakpoint == "xs") {
+    @return "";
+  } @else {
+    @return unquote("-" + $breakpoint);
+  }
+}

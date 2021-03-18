@@ -1,0 +1,48 @@
+hr {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  
+  .color-caption {
+    color: red;
+  }
+  
+  .caps {
+    text-transform: uppercase;
+  }
+  
+  .error p {
+    font-size: 13px;
+    margin-top: 1px;
+    color: #F44336;
+  }
+  
+  .spinner-container {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    transition-property: transform,-webkit-transform;
+    position: fixed;
+    top: 0;
+    background-color: gray;
+    opacity: 0.6;
+  }
+  
+  .spinner-border {
+    place-self: center;
+    width: 80px;
+    height: 80px;
+  }
+  
+  
+  @media (min-width: 768px) {
+    form {
+      width: 30rem;
+    }
+  }
+  
+  

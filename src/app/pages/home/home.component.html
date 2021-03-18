@@ -1,0 +1,112 @@
+<!-- <div class="swiper-slide">
+    <picture>
+        <source media="(min-width: 1200px)" srcset="assets/images/general-banner.jpg">
+        <source media="(min-width: 576px)" srcset="assets/images/general-banner.jpg">
+        <source media="(max-width: 576px)" srcset="assets/images/general-banner.jpg">
+        <img src="assets/images/general-banner.jpg" alt="Banner photo">
+    </picture>
+
+    <div class="card border-0 shadow-none">
+        <div class="card-body">
+            <button class="btn btn-black" [routerLink]="'/church-location/' + 'pre-register'">Sign Up</button>
+            <div class="pt-50">
+                <label for="code" class="font-avenir">Already registered?</label>
+                <p for="code" class="font-avenir font">Enter your registration code</p>
+                <input (keyup)="confirmCode()" [(ngModel)]="regCode"
+                    class="no-outline form-control border-hidden inputText" name="code" type="text">
+                <div class="error" *ngIf="(errorValidation && regCode !== '') && regCode.length >= 5">
+                    <p>Registration Code is incorrect.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="isLoading" class="d-flex justify-content-center spinner-container">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div> -->
+<div class="swiper-slide">
+    <div class="circle"></div>
+
+
+    <section class="pt-100 h-50">
+        <div class="row py-30 px-30">
+            <div class="col-lg-6 col-md-12">
+                <div data-aos="zoom-in-up" class="text-content content-container px-lg-100 pb-lg-100 pb-50">
+                    <h2 class="section-title-blue font-work-sans pb-30">Welcome to Victory's registration site!</h2>
+                    <p class="caption">You can now easily register for events, conferences, and classes online.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 px-lg-100">
+                <select class="btn btn-primary font-work-sans button-location" [(ngModel)]="congregation"
+                    (change)="selectedCongregation()">
+                    <option selected="selected" class="location">{{congregation}}</option>
+                    <option *ngFor="let church of churches" [ngValue]="church">{{church}}</option>
+                </select>
+                <div class="pt-20 text-center px-lg-100">
+                    <label for="code" class="font-work-sans">Check registration status</label>
+                    <input (keyup)="confirmCode()" 
+                        class="no-outline form-control border-hidden inputText" name="code" type="text">
+                    <p for="code" class="font-work-sans font">enter your registration code</p>
+                    <!-- <div class="error" *ngIf="(errorValidation && regCode !== '') && regCode.length >= 5">
+                        <p>Registration Code is incorrect.</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="color-background d-md-none d-none d-lg-block">
+        <div class="row">
+            <div class="col-lg-6 phone-image">
+                <!-- <img src="assets/images/phone.png" alt=""> -->
+            </div>
+            <div class="col-lg-6 pr-lg-100">
+                <div data-aos="zoom-in-up" class="text-content content-container pr-lg-100 pb-50 pt-lg-100">
+                    <h2 class="section-title-white pb-30">Register anytime, wherever you are.</h2>
+                    <p class="caption-white">Sign up and pay with just a few clicks on your phone or desktop.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="circle-two"></div>
+    </section>
+</div>
+
+
+<!-- <section class="mt-50 container-fluid">
+    <div class="row color-background ">
+        <div class="col-6">
+            <div class="content">
+                <h2 class="section-title-blue font-work-sans">Welcome to Victory's registration site!</h2>
+                <p class="caption">You can now easily register for events, conferences, and classes online.</p>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card border-0 shadow-none">
+                <div class="card-body">
+                    <button class="btn btn-primary font-work-sans"
+                        [routerLink]="'/church-location/' + 'pre-register'">Choose a Victory Location</button>
+                    <div class="pt-50">
+                        <label for="code" class="font-work-sans">Check registration status</label>
+                        <input (keyup)="confirmCode()" [(ngModel)]="regCode"
+                            class="no-outline form-control border-hidden inputText" name="code" type="text">
+                        <p for="code" class="font-work-sans font">enter your registration code</p>
+                        <div class="error" *ngIf="(errorValidation && regCode !== '') && regCode.length >= 5">
+                            <p>Registration Code is incorrect.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+<!-- <div *ngIf="isLoading" class="d-flex justify-content-center spinner-container">
+    <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div> -->

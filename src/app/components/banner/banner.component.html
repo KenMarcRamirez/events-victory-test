@@ -1,0 +1,17 @@
+<!-- <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <picture>
+                <source media="(min-width: 1200px)" attr.srcset="assets/images/banner.jpg">
+                <source media="(min-width: 576px)" attr.srcset="assets/images/banner.jpg">
+                <source media="(max-width: 576px)" attr.srcset="assets/images/banner.jpg">
+                <img src="assets/images/banner.jpg" alt="Banner photo">
+            </picture>
+        </div>
+    </div>
+</div> -->
+
+<div class="content">
+    <h5 class="font-work-sans" [ngClass]="contentText?.subtitle === '' ? '' : 'underline-title' ">{{contentText?.subtitle}}</h5>
+    <h1 class="font-work-sans" [ngClass]="contentText?.subtitle === '' ? 'underline-title' : 'pt-10' ">{{contentText?.title}}</h1>
+</div>

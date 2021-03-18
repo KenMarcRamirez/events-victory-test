@@ -1,0 +1,51 @@
+<aside class="sidemenu">
+    <div class="sidemenu-header">
+        <a routerLink="/" class="sidemenu-logo" (click)="closeMenu()">
+            <img src="assets/images/enc-logo-black.png" alt="Victory Logo">
+        </a>
+        <a href="javascript:void(0)" class="close-icon" (click)="closeMenu()" aria-label="Close">
+            <span class="custom-icon-close"></span>
+        </a>
+    </div>
+    <div class="sidemenu-content" *ngIf="menus">
+        
+        <ul>
+            <ng-container *ngFor="let menu of menus; let i = index">
+                <li class="dropdown">
+                    <span class="d-flex">
+                        <a [routerLink]="menu?.url">
+                            {{menu?.name}}
+                        </a>
+                        <!-- <a href="javascript:void(0)" (click)="parentActive===i ? parentActive=null : parentActive=i"
+                            *ngIf="menu?.a_target === '_child'">{{menu?.name}}</a>
+                        <span class="custom-icon-arrow-down"
+                            (click)="parentActive===i ? parentActive=null : parentActive=i "
+                            *ngIf="menu?.children?.length"></span> -->
+                    </span>
+                    <!-- <ul class="submenu" [ngClass]="{'open' : parentActive===i}" *ngIf="menu?.children?.length">
+                        <li class="dropdown" *ngFor="let child of menu?.children; let j = index;">
+                            <span class="d-flex" *ngIf="child?.a_target != '_blank'">
+                                <a [routerLink]="child?.segment" (click)="closeMenu()">
+                                    {{child?.name}}
+                                </a>
+                                <span class="custom-icon-arrow-down"
+                                    (click)="childActive===j ? childActive=null : childActive=j"
+                                    *ngIf="child?.children?.length"></span>
+                            </span>
+                            <a [href]="child?.url" target="_blank" rel="noopener"
+                                *ngIf="child?.a_target === '_blank'">{{child?.name}}</a>
+                            <ul class="submenu" [ngClass]="{'open' : childActive===j}" *ngIf="child?.children?.length">
+                                <li *ngFor="let sibling of child?.children">
+                                    <a [routerLink]="sibling?.slug" (click)="closeMenu()">
+                                        {{sibling?.name}}
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul> -->
+                </li>
+            </ng-container>
+        </ul>
+    </div>
+</aside>
+<div class="sidemenu-backdrop" (click)="closeMenu()"></div>

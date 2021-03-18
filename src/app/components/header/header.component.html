@@ -1,0 +1,48 @@
+<header *ngIf="menus">
+    <!-- <div> -->
+        <nav class="navbar navbar-expand-lg" (scroll)="onWindowScroll($event);">
+            <a class="navbar-brand" routerLink="/" aria-label="ENC Logo">
+                <img src="assets/images/victory-logo-black.png" alt="ENC Logo">
+            </a>
+            <div class="nav-container">
+                <!-- <ul>
+                    <li class="d-lg-none pt-25">
+                        <a href="javascript:void(0)" (click)="toggleMenu()">
+                            <span class="custom-icon-menu menu-icon"></span>
+                        </a>
+                    </li>
+                </ul> -->
+<!-- 
+                <ul class="navbar-nav ml-auto d-none d-lg-block">
+                    <ng-container *ngFor="let menu of menus; let i = index;">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" routerLink="/"
+                                id="dropdown"><span>{{menu?.name}}</span></a>
+                            <div class="dropdown-menu" [class.dropdown-menu-right]="i==(menus?.length-1)"
+                                aria-labelledby="dropdown" *ngIf="menu?.children?.length">
+                                <ng-container *ngFor="let child of menu?.children">
+                                    <div [ngClass]="{'dropdown sub' : child.children}">
+                                        <a class="nav-link" [class.dropdown-toggle]="child?.children?.length > 0"
+                                            [routerLink]="child?.segment" *ngIf="child?.a_target!='_blank'"
+                                            [class.active]="activeChildLink === child?.slug || ((router.url | link) === (child?.segment | link))">
+                                            {{child?.name}}
+                                        </a>
+                                        <a [href]="child?.url" [target]="child?.a_target" *ngIf="child?.a_target==='_blank'"
+                                            rel="noopener">{{child?.name}}</a>
+                                        <div class="dropdown-menu sub-dropdown-menu" *ngIf="child?.children?.length > 0">
+                                            <ng-container *ngFor="let sub of child?.children">
+                                                <a [routerLink]="sub?.segment" *ngIf="sub?.a_target!='_blank'"
+                                                    [class.active]="sub?.segment === urlPath">{{sub?.name}}</a>
+                                                <a [href]="sub?.url" *ngIf="sub?.a_target==='_blank'">{{sub?.name}}</a>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </li>
+                    </ng-container>
+                </ul> -->
+            </div>
+        </nav>
+    <!-- </div> -->
+</header>

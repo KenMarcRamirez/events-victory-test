@@ -1,0 +1,14 @@
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    // color: $base-font-color;
+    line-height: 21px;
+}
+body.dialog-open {
+    overflow: hidden;
+}
+@media(min-width: 1200px) {
+    .main-content {
+        min-height: calc(100vh - 83px);
+    }
+}

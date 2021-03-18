@@ -1,0 +1,20 @@
+<ng-template #content let-modal>
+    <div class="pb-60">
+      <h4 class="section-title-black font-italic text-center" id="modal-basic-title">AWESOME!</h4>
+      <!-- <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+    </div>
+    <div class="pb-60">
+      <p class="section-caption text-center">You'll receive an email within 2 - 3 days regarding the status of your registration.</p>
+    </div>
+    <div class="button-modal">
+      <button type="button" class="btn btn-redish" routerLink="/" (click)="modal.close('Save click')">Done</button>
+    </div>
+  </ng-template>
+  
+  <button class="btn btn-black" [disabled]="!form.valid" (click)="open(content)">Submit</button>
+  
+  <hr>
+  
+  <!-- <pre>{{closeResult}}</pre> -->
